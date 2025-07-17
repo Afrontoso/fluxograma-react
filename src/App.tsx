@@ -2,8 +2,9 @@ import React from 'react';
 import Header from './components/Header';
 import CourseFlowchart from './components/CourseFlowchart';
 function App() {
-  const [selectedCourse, setSelectedCourse] = React.useState('eng-software');
-
+  const [selectedCourse] = React.useState('eng-software');
+  //const [selectedCourse, setSelectedCourse] = React.useState('eng-software');
+  
   return (
     <div className="bg-gray-900 text-gray-100 min-h-screen font-sans">
       <Header /> 
