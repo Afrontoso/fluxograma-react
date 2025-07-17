@@ -1,5 +1,3 @@
-import React from 'react';
-
 // Componente provisório para o cabeçalho
 const HeaderPlaceholder = () => {
   return (
@@ -34,7 +32,7 @@ function App() {
         <CourseFlowchartPlaceholder />
       </main>
 
-      <footer className="text-center p-4 mt-12 text-gray-500 text-sm">
+      <footer className="text-center p- mt-12 text-gray-500 text-sm">
         <p>Desenvolvido para a comunidade acadêmica.</p>
       </footer>
     </div>
