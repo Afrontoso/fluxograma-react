@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './components/Header';
 
 // --- ESTRUTURA DE DADOS (Provisória) ---
 const courses = [
@@ -8,19 +9,7 @@ const courses = [
 ];
 
 // --- COMPONENTES (Provisórios) ---
-
-const Header = () => (
-  <header className="bg-gray-800 text-white shadow-lg sticky top-0 z-50">
-    <nav className="container mx-auto p-4 flex justify-between items-center">
-      <h1 className="text-2xl font-bold text-cyan-400">Fluxograma UnB</h1>
-      <div>
-        {/* Espaço reservado para o seletor de cursos e o botão de login */}
-        <span className="text-gray-400 text-sm">Seletor de Cursos</span>
-      </div>
-    </nav>
-  </header>
-);
-
+// Mais tarde, vamos criar este componente no seu próprio ficheiro
 const CourseFlowchart = ({ courseId }: { courseId: string }) => {
   const course = courses.find(c => c.id === courseId);
   return (
@@ -34,7 +23,6 @@ const CourseFlowchart = ({ courseId }: { courseId: string }) => {
 };
 
 // --- COMPONENTE PRINCIPAL ---
-
 function App() {
   // No futuro, este estado será usado para mudar de curso.
   // Por agora, vamos deixar o curso de Eng. de Software fixo.
@@ -42,7 +30,8 @@ function App() {
 
   return (
     <div className="bg-gray-900 text-gray-100 min-h-screen font-sans">
-      <Header />
+      {/* 2. Usa o componente Header importado */}
+      <Header /> 
       
       <main className="container mx-auto mt-8 px-4">
         <CourseFlowchart courseId={selectedCourse} />
